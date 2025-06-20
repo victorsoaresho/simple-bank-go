@@ -1,0 +1,7 @@
+docker container run --name postgres \
+  -p 5432:5432 \
+  -d \
+  -v "$(pwd)/postgres-data:/var/lib/postgresql/data" \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=senha \
+  postgres:alpine
